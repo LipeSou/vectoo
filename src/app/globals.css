@@ -34,6 +34,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  background-color: none;
+  border: none;
+  border-radius: 12px;
+}
 
 .theme-switch__label:checked ~ span {
   --primary-color: blue;
@@ -95,7 +100,7 @@ span {
   margin-left: 4px;
   margin-right: 4px;
   background-image: url(../assets/sun.svg);
-  
+
 }
 
 
