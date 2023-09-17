@@ -78,6 +78,7 @@
     }
 
     .mobileChangeTheme{
+        display: unset;
        margin-right: 32px;
     }
 }
