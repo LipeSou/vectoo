@@ -9,7 +9,7 @@ import styles from './header.module.css';
 export default function Header() {
   const pathname = usePathname();
   const { width } = useWindowSize();
-  const isMobile = width <= 720;
+  const isMobile = width <= 991;
   const [showMenu, setShowMenu] = useState(!isMobile);
 
   return (

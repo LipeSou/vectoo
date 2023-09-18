@@ -61,7 +61,7 @@
 
 
 
-@media (max-width: 720px) {
+@media (max-width: 991px) {
     .container {
         grid-template-columns: 2.4rem 1fr 2.4rem;
     }
@@ -75,6 +75,7 @@
         width: 100vw;
         font-size: 22px;
         padding-top: 2.8rem;
+        background-color: var(--background-header);
     }
 
     .mobileChangeTheme{

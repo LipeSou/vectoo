@@ -1,9 +1,9 @@
+import Layout from '@/components/home/Home';
+
 export default function Home() {
   return (
-    <main>
-      <div>
-        home
-      </div>
+    <main style={{ width: '100vw' }}>
+      <Layout />
     </main>
   );
 }
