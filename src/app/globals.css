@@ -6,6 +6,9 @@
   --black-50: #515255;
   --background: #ffffff;
   --background-header: rgba(255, 255, 255, 0.8);
+  --buttom-shadow-primary: rgb(243, 173, 21) 0px 20px 50px 4px;
+  --buttom-shadow-secondary: rgb(116, 195, 229) 0px 20px 50px 4px;
+  --buttom-shadow-tertiary: rgb(244, 153, 156) 0px 20px 50px 4px;
 }
 
 html,
@@ -37,7 +40,7 @@ a {
 button {
   background-color: none;
   border: none;
-  border-radius: 12px;
+  border-radius: 50px;
 }
 
 .theme-switch__label:checked ~ span {
@@ -100,7 +103,6 @@ span {
   margin-left: 4px;
   margin-right: 4px;
   background-image: url(../assets/icons/sun.svg);
-
 }
 
 
@@ -109,4 +111,7 @@ span {
   --background-header: rgba(24, 24, 24, 0.8);
   --gray-50: #515255;
   --black-50: #D9D9D9;
+  --buttom-shadow-primary: rgb(243, 173, 21,  0.56) 0px 20px 50px 2px;
+  --buttom-shadow-secondary: rgb(116, 195, 229,  0.56) 0px 20px 50px 2px;
+  --buttom-shadow-tertiary: rgb(244, 153, 156,  0.56) 0px 20px 50px 2px;
 }

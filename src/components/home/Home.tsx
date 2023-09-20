@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './home.module.css';
 import homeImage from '../../assets/images/homepage.svg';
 
@@ -9,15 +10,15 @@ export default function Home() {
         <div className={styles.descriptionContainer}>
           <div>
             <h1 className={styles.title}>
-              Open source
+              Open Source
               {' '}
-              <span className={styles.titleBold}>images</span>
+              <span className={styles.titleBold}>Images</span>
             </h1>
           </div>
           <p className={styles.descriptionSite}>
             Totally free images that you can use on your projects.
           </p>
-          <button type="button" className={styles.buttonGetImages}>Get Images</button>
+          <Link href="./get-images" className={styles.buttonGetImages}>Get Images</Link>
         </div>
         <div className={styles.imageContainer}>
 
