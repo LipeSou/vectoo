@@ -1,16 +1,11 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useWindowSize } from 'usehooks-ts';
 import styles from './header.module.css';
 
 export default function Header() {
   const pathname = usePathname();
-  const { width } = useWindowSize();
-  const isMobile = width <= 991;
-  const [showMenu, setShowMenu] = useState(!isMobile);
 
   return (
     <header className={styles.container}>
