@@ -14,7 +14,6 @@ export default function Header() {
       <div className={styles.logoContainer}>
         <Link href="/" className={styles.logo}>Vectoo</Link>
 
-        {/* logo hamburger menu mobile */}
         {/* {!showMenu && isMobile && (
           <svg onClick={() => setShowMenu((currentState) => !currentState)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-menu ">
             <line x1="3" y1="12" x2="21" y2="12" />
@@ -29,12 +28,12 @@ export default function Header() {
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         )} */}
-        <div className="themeContainer">
-          <label htmlFor="menuMobile" className={styles.menuMobileLabel}>
-            <input id="menuMobile" type="checkbox" className={styles.menuMobile} />
-            <div className={styles.menuButton} />
-          </label>
-        </div>
+
+        {/* logo hamburger menu mobile */}
+        <label htmlFor="menuMobile" className={styles.menuMobileLabel}>
+          <input id="menuMobile" type="checkbox" className={styles.menuMobile} />
+          <div className={styles.menuButton} />
+        </label>
 
         {/* navbar menu */}
 
