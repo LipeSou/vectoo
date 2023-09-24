@@ -10,14 +10,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background: var(--primary-10);
+    background: var(--background);
 }
 
 .tabInactive {
     width: 9.0rem;
     height: 100%;
     border-right:  1.5px solid var(--gray-50);
-    border-top: 1.5px solid var(--gray-50);
     border-left:   1.5px solid  var(--gray-50);
     display: flex;
     align-items: center;
@@ -27,11 +26,8 @@
     transition: 0.2s all ease-in-out;
 }
 
-.tabInactive:hover {
-    background-color: var(--primary-10);
-}
-
 .tabText {
     font-size: 1.2rem;
     font-weight: 500;
+    color: var(--black-50);
 }
