@@ -17,7 +17,6 @@
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
-    width: 55.5rem;
     font-weight: 300;
 }
 
@@ -30,16 +29,21 @@
 }
 
 .buttonGetImages {
-    /* color: var(--gray-50); */
     font-size: 1.8rem;
-    /* background-color: #ffffff; */
     padding: 16px 18px 16px 18px;
     width: fit-content;
-    border: 2px solid var(--gray-50);
+    border: 1px solid var(--gray-50);
     border-radius: 12px;
     font-weight: 500;
     box-shadow: var(--buttom-shadow-primary);
     animation: shadow-change 8s  infinite;
+    transition: 0.2s all ease-in-out;
+}
+
+.buttonGetImages:hover {
+    color: #ffffff;
+    background-color: var(--primary-50);
+    border: 1px solid var(--black-50);
 }
 
 @keyframes shadow-change {
@@ -48,17 +52,6 @@
     50% { box-shadow: var(--buttom-shadow-tertiary); }
     75% { box-shadow: var(--buttom-shadow-secondary); }
     100% { box-shadow: var(--buttom-shadow-primary); }
-}
-/* 243, 174, 21 */
-.buttonGetImages:hover {
-    color: #ffffff;
-    font-size: 1.8rem;
-    background-color: var(--primary-50);
-    padding: 16px 18px 16px 18px;
-    width: fit-content;
-    border: 1px solid var(--black-50);
-    border-radius: 12px;
-    font-weight: 500;
 }
 
 
@@ -71,9 +64,37 @@
     width: 30vw;
 }
 
-@media (max-width: 1000px) {
+
+.imageHome {
+    width: 100%;
+}
+
+@media screen and (max-width: 1250px) and (min-width: 700px) {
+    .container {
+        margin-top: 14.0rem;
+        grid-template-columns: 12.8rem 1fr 12.8rem;
+    }
+
+   
+
+    .title {
+        font-size: 4.0rem;
+        line-height: 5.0rem;
+    }
+
+    .descriptionSite {
+        width: 24.8rem;
+    }
+
+    .imageContainer {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 700px) {
     .container {
         margin-top: 11.0rem;
+        grid-template-columns: 2.4rem 1fr 2.4rem;
     }
 
     .descriptionContainer {
@@ -83,10 +104,6 @@
 
     .descriptionSite {
         width: 21.0rem;
-    }
-
-    .container {
-        grid-template-columns: 2.4rem 1fr 2.4rem;
     }
 
     .title {
@@ -106,6 +123,6 @@
     }
 
     .buttonGetImages {
-        margin-top: 22.0rem;
+        margin-top: 36vh;
     }
 }

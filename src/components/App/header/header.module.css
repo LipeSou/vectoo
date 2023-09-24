@@ -13,7 +13,7 @@
     font-weight: 500;
 }
 
-.logoContainer {
+.logoAndNabBarContainer {
     grid-column-start: 2;
     display: flex;
     align-items: center;
@@ -97,10 +97,16 @@
       background-image: url(../../../assets/icons/menu.svg);
   }
 
+  
+
+@media screen and (max-width: 1250px) and (min-width: 600px) {
+    .container {
+        grid-template-columns: 2.4rem 1fr 2.4rem;
+    }
+}
 
 
-
-@media (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     .container {
         grid-template-columns: 2.4rem 1fr 2.4rem;
     }
@@ -120,8 +126,6 @@
         font-size: 22px;
         padding-top: 2.8rem;
         background-color: var(--background);
-        transition: 0.4s;
-        transition-timing-function: ease-in-out;
     }
 
 

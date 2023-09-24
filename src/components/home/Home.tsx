@@ -29,8 +29,7 @@ export default function Home() {
                   table has a Japanese plant and in the background there
                   are several thoughts that the person likes like planets,
                   love."
-            width={555}
-            layout="responsive"
+            style={{ width: '100%', height: '100%' }}
           />
         </div>
       </main>

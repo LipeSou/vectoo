@@ -9,9 +9,9 @@ export default function Header() {
 
   return (
     <header className={styles.container}>
-      {/* logo */}
 
-      <div className={styles.logoContainer}>
+      <div className={styles.logoAndNabBarContainer}>
+        {/* logo */}
         <Link href="/" className={styles.logo}>Vectoo</Link>
 
         {/* logo hamburger menu mobile */}
@@ -43,8 +43,8 @@ export default function Header() {
             </div>
           </ul>
         </label>
-
       </div>
+
     </header>
   );
 }
