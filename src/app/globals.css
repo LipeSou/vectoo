@@ -1,4 +1,5 @@
 :root {
+  --primary-10: #FDEFD0;
   --primary-30: #FADFA1;
   --primary-50: #F3AE15;
   --secondary-50: #74C3E5;
@@ -9,6 +10,7 @@
   --buttom-shadow-primary: rgb(243, 173, 21) 0px 20px 50px 4px;
   --buttom-shadow-secondary: rgb(116, 195, 229) 0px 20px 50px 4px;
   --buttom-shadow-tertiary: rgb(244, 153, 156) 0px 20px 50px 4px;
+  --shadow-black: rgb(217, 217, 217) 0px 20px 50px 26px;
 }
 
 html,
@@ -30,6 +32,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: var(--background);
+  font-size: 1.6rem;
 }
 
 a {
@@ -40,7 +43,6 @@ a {
 button {
   background-color: none;
   border: none;
-  border-radius: 50px;
 }
 
 .theme-switch__label:checked ~ span {
@@ -114,4 +116,5 @@ span {
   --buttom-shadow-primary: rgb(243, 173, 21,  0.56) 0px 20px 50px 2px;
   --buttom-shadow-secondary: rgb(116, 195, 229,  0.56) 0px 20px 50px 2px;
   --buttom-shadow-tertiary: rgb(244, 153, 156,  0.56) 0px 20px 50px 2px;
+  --shadow-black: rgb(217, 217, 217,  0.16) 0px 20px 50px 1px;
 }

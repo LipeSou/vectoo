@@ -1,0 +1,53 @@
+.navbar {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    gap: 2.8rem;
+    font-size: 1.6rem;
+    list-style-type: none;
+}
+
+.navbarLiMenu {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.linkActive {
+    color: var(--primary-50);
+}
+
+
+
+.link:hover {
+    color: var(--primary-50);
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.mobileChangeTheme{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar{
+        opacity: 0;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        position: absolute;
+        flex-direction: column;
+        justify-content: start;
+        top: 100%;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        font-size: 22px;
+        padding-top: 2.8rem;
+        background-color: var(--background);
+    }
+
+    .menuMobileLabel, .mobileChangeTheme{
+        display: flex;
+      }
+}

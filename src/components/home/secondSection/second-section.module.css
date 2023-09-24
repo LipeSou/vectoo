@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 5.2rem;
+}
+
+.description {
+    font-size: 2.0rem;
+    margin-top: 1.6rem;
+}
+
+@media screen and (max-width: 700px) {
+    .title, .description{
+        width: 90vw;
+    }
+}
