@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 interface GirlPaintingProps {
-  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+  width: string;
+  height: string
 }
 
-export default function GirlPainting({ props }:GirlPaintingProps) {
+export default function GirlPainting({ width, height }:GirlPaintingProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,8 +17,8 @@ export default function GirlPainting({ props }:GirlPaintingProps) {
         strokeMiterlimit: 1.5,
       }}
       viewBox="0 0 1344 1828"
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      {...props}
+      width={width}
+      height={height}
     >
       <ellipse
         cx={1450.86}
