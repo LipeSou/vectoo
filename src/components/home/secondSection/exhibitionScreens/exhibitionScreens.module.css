@@ -1,0 +1,45 @@
+.exibitionScreenHeader {
+    height: 4.4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.iconBall {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: var(--gray-50);
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-left: 75px;
+}
+
+.navBar {
+    height: 1.6rem;
+    width: 8.8rem;
+    background-color: var(--gray-50);
+    border-radius: 10px;
+    margin-right: 75px;
+}
+
+.webContainer {
+    margin-left: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.webDescriptionContainer { 
+    display: flex;
+    flex-direction: column;
+    gap: 2.0rem;
+    margin-left: 4vw;
+}
+
+.webTitle {
+    height: 1.6rem;
+    width: 10.0rem;
+    background-color: var(--gray-50);
+    border-radius: 50%;
+    border-radius: 10px;
+}

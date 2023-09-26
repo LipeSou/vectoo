@@ -8,7 +8,7 @@ A dedicated website so I can provide vector drawings made by me in an open sourc
 
 ## Local Development
 
-To develop Dub locally, you will need to clone this repository.
+You will need to clone this repository.
 
 Once that's done, you can use the following commands to run the app locally:
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import styles from './images.module.css';
 
 export interface ImagesExtructure {
@@ -9,35 +9,33 @@ export interface ImagesExtructure {
 }
 
 interface ImagesProps {
-  images: ImagesExtructure[]
+  images: ImagesExtructure[];
+  activeTab: ImagesExtructure;
+  setActiveTab: Dispatch<SetStateAction<ImagesExtructure>>
 }
 
-export default function Images({ images }: ImagesProps) {
-  const [activeTab, setActiveTab] = useState<ImagesExtructure>({
-    quantityColors: 4,
-    nameLabel: 'Painting',
-  });
+export default function Images({ images, activeTab, setActiveTab }: ImagesProps) {
   return (
     <>
+      {/* tab images */}
       {
-      images.map((image) => (
-        <button
-          onClick={() => setActiveTab(image)}
-          type="button"
-          className={
-            activeTab.nameLabel === image.nameLabel
-              ? styles.tabActive
-              : styles.tabInactive
-          }
-          key={image.nameLabel}
-        >
-          <p className={styles.tabText}>
-            {image.nameLabel}
-          </p>
-        </button>
-      ))
-    }
+        images.map((image) => (
+          <button
+            onClick={() => setActiveTab(image)}
+            type="button"
+            className={
+              activeTab.nameLabel === image.nameLabel
+                ? styles.tabActive
+                : styles.tabInactive
+            }
+            key={image.nameLabel}
+          >
+            <p className={styles.tabText}>
+              {image.nameLabel}
+            </p>
+          </button>
+        ))
+      }
     </>
-
   );
 }
