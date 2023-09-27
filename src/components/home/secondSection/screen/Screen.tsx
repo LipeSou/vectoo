@@ -1,28 +1,28 @@
 'use client';
 
 import { useState } from 'react';
-import Images, { ImagesExtructure } from '../images/Images';
+import Images, { ImagesExtructure, StateImage } from '../images/Images';
 import styles from './screen.module.css';
 import ExhibitionScreens from '../exhibitionScreens/ExhibitionScreens';
 
 export default function Screen() {
   const [activeTab, setActiveTab] = useState<ImagesExtructure>({
     quantityColors: 4,
-    nameLabel: 'Painting',
+    nameLabel: StateImage.PAINTING,
   });
   const images: ImagesExtructure[] = [
     {
       quantityColors: 4,
-      nameLabel: 'Painting',
+      nameLabel: StateImage.PAINTING,
     },
     {
       quantityColors: 4,
-      nameLabel: 'Meditation',
+      nameLabel: StateImage.MEDITATION,
     },
-    {
-      quantityColors: 4,
-      nameLabel: 'Training',
-    },
+    // {
+    //   quantityColors: 4,
+    //   nameLabel: StateImage.TRAINING,
+    // },
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function Screen() {
         />
       </div>
       {/* exhibition screens */}
-      <ExhibitionScreens />
+      <ExhibitionScreens activeTab={activeTab} />
     </div>
   );
 }

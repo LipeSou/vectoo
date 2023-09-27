@@ -3,9 +3,15 @@
 import { Dispatch, SetStateAction } from 'react';
 import styles from './images.module.css';
 
+export enum StateImage {
+  PAINTING = 'Painting',
+  MEDITATION = 'Meditation',
+  TRAINING = 'Training',
+}
+
 export interface ImagesExtructure {
   quantityColors: number,
-  nameLabel: string
+  nameLabel: StateImage;
 }
 
 interface ImagesProps {

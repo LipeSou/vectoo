@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 interface GirlPaintingProps {
-  width: string;
-  height: string
+  width?: string;
+  height?: string;
 }
 
 export default function GirlPainting({ width, height }:GirlPaintingProps) {
@@ -379,3 +379,8 @@ export default function GirlPainting({ width, height }:GirlPaintingProps) {
     </svg>
   );
 }
+
+GirlPainting.defaultProps = {
+  width: '',
+  height: '',
+};

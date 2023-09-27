@@ -1,7 +1,13 @@
 import GirlPainting from '@/assets/images/GirlPainting';
+import GirlMeditating from '@/assets/images/GirlMeditating';
 import styles from './exhibitionScreens.module.css';
+import { ImagesExtructure, StateImage } from '../images/Images';
 
-export default function ExhibitionScreens() {
+interface ExhibitionScreensProps {
+  activeTab: ImagesExtructure;
+}
+
+export default function ExhibitionScreens({ activeTab }: ExhibitionScreensProps) {
   return (
     <>
       <div className={styles.exibitionScreenHeader}>
@@ -9,11 +15,14 @@ export default function ExhibitionScreens() {
         <div className={styles.navBar} />
       </div>
       <div className={styles.webContainer}>
-        <div>
-          <GirlPainting width="196px" height="256px" />
+        <div className={styles.imageaaa}>
+          {activeTab.nameLabel === StateImage.PAINTING && <GirlPainting width="60%" />}
+          {activeTab.nameLabel === StateImage.MEDITATION && <GirlMeditating width="120%" />}
+          {activeTab.nameLabel === StateImage.TRAINING && <GirlPainting width="60%" />}
+
         </div>
         <div className={styles.webDescriptionContainer}>
-          <div className={styles.webTitle} />
+          <div className={styles.webTitleBlue} />
           <div className={styles.webTitle} />
           <div className={styles.webTitle} />
           <div className={styles.webTitle} />

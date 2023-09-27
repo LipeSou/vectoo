@@ -8,38 +8,69 @@
 
 .iconBall {
     height: 1.6rem;
-    width: 1.6rem;
+    width: 3.2rem;
     background-color: var(--gray-50);
-    border-radius: 50%;
+    border-radius: 30%;
     margin-right: 8px;
-    margin-left: 75px;
+    margin-left: 15px;
 }
 
 .navBar {
     height: 1.6rem;
     width: 8.8rem;
-    background-color: var(--gray-50);
+    background-color: var(--primary-50);
     border-radius: 10px;
-    margin-right: 75px;
+    margin-right: 15px;
 }
 
 .webContainer {
-    margin-left: 75px;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 15px 1fr 250px 15px;
+    height: 70%;
+    margin-left: 20px;
 }
 
 .webDescriptionContainer { 
     display: flex;
     flex-direction: column;
     gap: 2.0rem;
-    margin-left: 4vw;
+    margin-left: 1vw;
+    margin-top: 4.8rem;
 }
 
 .webTitle {
     height: 1.6rem;
-    width: 10.0rem;
+    width: 100px;
     background-color: var(--gray-50);
     border-radius: 50%;
     border-radius: 10px;
+}
+
+.webTitleBlue {
+    height: 1.6rem;
+    width: 135px;
+    background-color: var(--secondary-50);
+    border-radius: 50%;
+    border-radius: 10px;
+}
+
+.imageaaa {
+    grid-column-start: 2;
+    justify-self: center;
+    align-self: center;
+}
+
+@media screen and (max-width: 700px) {
+    .webContainer {
+        display: grid;
+        grid-template-columns: 15px 1fr ;
+    }
+
+    .webTitle {
+       display: none;
+    }
+    
+    .webTitleBlue {
+        display: none;
+    }
 }
