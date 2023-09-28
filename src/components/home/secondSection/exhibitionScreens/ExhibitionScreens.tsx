@@ -16,8 +16,8 @@ export default function ExhibitionScreens({ activeTab }: ExhibitionScreensProps)
       </div>
       <div className={styles.webContainer}>
         <div className={styles.imageaaa}>
-          {activeTab.nameLabel === StateImage.PAINTING && <GirlPainting width="60%" />}
-          {activeTab.nameLabel === StateImage.MEDITATION && <GirlMeditating width="120%" />}
+          {activeTab.nameLabel === StateImage.PAINTING && <GirlPainting width="80%" />}
+          {activeTab.nameLabel === StateImage.MEDITATION && <GirlMeditating />}
           {activeTab.nameLabel === StateImage.TRAINING && <GirlPainting width="60%" />}
 
         </div>
