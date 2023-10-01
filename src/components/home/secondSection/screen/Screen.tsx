@@ -1,30 +1,18 @@
 'use client';
 
-import { useState } from 'react';
-import Images, { ImagesExtructure, StateImage } from '../images/Images';
+import { Dispatch, SetStateAction } from 'react';
 import styles from './screen.module.css';
 import ExhibitionScreens from '../exhibitionScreens/ExhibitionScreens';
+import Images from '../images/Images';
+import { ImagesExtructure, StateImage } from '../__types__/images';
 
-export default function Screen() {
-  const [activeTab, setActiveTab] = useState<ImagesExtructure>({
-    quantityColors: 4,
-    nameLabel: StateImage.PAINTING,
-  });
-  const images: ImagesExtructure[] = [
-    {
-      quantityColors: 4,
-      nameLabel: StateImage.PAINTING,
-    },
-    {
-      quantityColors: 4,
-      nameLabel: StateImage.MEDITATION,
-    },
-    // {
-    //   quantityColors: 4,
-    //   nameLabel: StateImage.TRAINING,
-    // },
-  ];
+interface ScreenProps {
+  images: ImagesExtructure[];
+  activeTab: StateImage;
+  setActiveTab: Dispatch<SetStateAction<StateImage>>
+}
 
+export default function Screen({ images, activeTab, setActiveTab }: ScreenProps) {
   return (
     <div className={styles.screenContainer}>
       <div className={styles.header}>
@@ -39,7 +27,7 @@ export default function Screen() {
         />
       </div>
       {/* exhibition screens */}
-      <ExhibitionScreens activeTab={activeTab} />
+      <ExhibitionScreens images={images} activeTab={activeTab} />
     </div>
   );
 }

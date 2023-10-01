@@ -2,22 +2,12 @@
 
 import { Dispatch, SetStateAction } from 'react';
 import styles from './images.module.css';
-
-export enum StateImage {
-  PAINTING = 'Painting',
-  MEDITATION = 'Meditation',
-  TRAINING = 'Training',
-}
-
-export interface ImagesExtructure {
-  quantityColors: number,
-  nameLabel: StateImage;
-}
+import { ImagesExtructure, StateImage } from '../__types__/images';
 
 interface ImagesProps {
   images: ImagesExtructure[];
-  activeTab: ImagesExtructure;
-  setActiveTab: Dispatch<SetStateAction<ImagesExtructure>>
+  activeTab: StateImage;
+  setActiveTab: Dispatch<SetStateAction<StateImage>>
 }
 
 export default function Images({ images, activeTab, setActiveTab }: ImagesProps) {
@@ -27,10 +17,10 @@ export default function Images({ images, activeTab, setActiveTab }: ImagesProps)
       {
         images.map((image) => (
           <button
-            onClick={() => setActiveTab(image)}
+            onClick={() => setActiveTab(image.nameLabel)}
             type="button"
             className={
-              activeTab.nameLabel === image.nameLabel
+              activeTab === image.nameLabel
                 ? styles.tabActive
                 : styles.tabInactive
             }
