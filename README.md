@@ -1,5 +1,5 @@
 <a href="https://vectoo.vercel.app">
-  <img alt="Vectoo – Your website open source images!" src="https://github.com/LipeSou/vectoo/assets/68256101/1a077b66-a008-4f2b-8d77-fb170935a7d9">
+  <img alt="Vectoo – Your website open source images!" src="https://github.com/LipeSou/vectoo/assets/68256101/5a607859-b681-46ae-b049-148e68f6b53a">
 </a>
 
 ## Welcome to the [Vectoo](https://vectoo.vercel.app/)! Your website open source images!
