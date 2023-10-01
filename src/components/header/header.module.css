@@ -52,7 +52,7 @@
 }
 
 .menuMobile:checked + .menuButton::before{
-    background-image: url(../../../assets/icons/x.svg);
+    background-image: url(../../assets/icons/x.svg);
 }
 
 .menuButton::before {
@@ -60,7 +60,7 @@
     width: 2.4rem;
     height: 2.4rem;
     transition: 0.2s all ease-in-out;
-    background-image: url(../../../assets/icons/menu.svg);
+    background-image: url(../../assets/icons/menu.svg);
 }
 
 

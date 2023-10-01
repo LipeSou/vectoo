@@ -16,11 +16,13 @@
     "eslint-config-next": "13.5.2",
     "next": "13.5.2",
     "react": "18.2.0",
+    "react-color": "^2.19.3",
     "react-dom": "18.2.0",
     "typescript": "5.2.2",
     "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
+    "@types/react-color": "^3.0.7",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
     "eslint-config-airbnb": "^19.0.4",

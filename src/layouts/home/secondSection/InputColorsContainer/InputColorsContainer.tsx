@@ -3,13 +3,15 @@
 import { Dispatch, SetStateAction } from 'react';
 import { ImagesExtructure, StateImage } from '../__types__/images';
 
-interface InputColorsProps {
+interface InputColorsContainerProps {
   images: ImagesExtructure[],
   setImages: Dispatch<SetStateAction<ImagesExtructure[]>>
   activeTab: StateImage,
 }
 
-export default function InputColors({ images, activeTab, setImages }:InputColorsProps) {
+export default function InputColorsContainer(
+  { images, activeTab, setImages }:InputColorsContainerProps,
+) {
   const activeImage = images.find((image) => image.nameLabel === activeTab);
 
   const setColor = (color: string, targetColorName: string) => {
@@ -32,8 +34,18 @@ export default function InputColors({ images, activeTab, setImages }:InputColors
 
   return (
     <div>
+      {/* <SketchPicker /> */}
+      {/* {activeImage?.colors.map((color) => (
+        <input type="color"
+         value={color.color} onChange={({ target }) => setColor(target.value, color.colorName)} />
+      ))} */}
+
       {activeImage?.colors.map((color) => (
-        <input type="color" value={color.color} onChange={({ target }) => setColor(target.value, color.colorName)} />
+        <input
+          type="color"
+          value={color.color}
+          onChange={({ target }) => setColor(target.value, color.colorName)}
+        />
       ))}
     </div>
   );
