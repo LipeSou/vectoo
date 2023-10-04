@@ -1,0 +1,18 @@
+.colorPicker {
+    position: relative;
+}
+
+.buttonColorPicker {
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+}
+
+
+.colorPickerContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    z-index: 1;
+  }

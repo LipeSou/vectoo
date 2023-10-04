@@ -1,6 +1,7 @@
 'use client';
 
 import { Dispatch, SetStateAction } from 'react';
+import ColorPicker from '@/components/colorPicker/ColorPicker';
 import { ImagesExtructure, StateImage } from '../__types__/images';
 
 interface InputColorsContainerProps {
@@ -33,18 +34,14 @@ export default function InputColorsContainer(
   };
 
   return (
-    <div>
-      {/* <SketchPicker /> */}
-      {/* {activeImage?.colors.map((color) => (
-        <input type="color"
-         value={color.color} onChange={({ target }) => setColor(target.value, color.colorName)} />
-      ))} */}
+    <div style={{ display: 'flex' }}>
 
       {activeImage?.colors.map((color) => (
-        <input
-          type="color"
-          value={color.color}
-          onChange={({ target }) => setColor(target.value, color.colorName)}
+        <ColorPicker
+          color={color.color}
+          colorName={color.colorName}
+          key={color.colorName}
+          setColor={setColor}
         />
       ))}
     </div>
