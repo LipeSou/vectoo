@@ -2,7 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import styles from './header.module.css';
+import logo from '../../assets/logos/vectooLogo.svg';
 
 export default function Header() {
   const pathname = usePathname();
@@ -12,7 +14,7 @@ export default function Header() {
 
       <div className={styles.logoAndNabBarContainer}>
         {/* logo */}
-        <Link href="/" className={styles.logo}>Vectoo</Link>
+        <Image src={logo} alt="logo vectoo" width={144} />
 
         {/* logo hamburger menu mobile */}
         <label htmlFor="menuMobile" className={styles.menuMobileLabel}>
