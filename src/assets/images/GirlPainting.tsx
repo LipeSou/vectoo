@@ -5,10 +5,11 @@ interface GirlPaintingProps {
   height?: string;
   color1?: string;
   color2?: string;
+  svgRef?: React.MutableRefObject<null>
 }
 
 export default function GirlPainting({
-  width, height, color1, color2,
+  width, height, color1, color2, svgRef,
 }:GirlPaintingProps) {
   return (
     <svg
@@ -23,6 +24,7 @@ export default function GirlPainting({
       viewBox="0 0 881 1322"
       width={width}
       height={height}
+      ref={svgRef}
     >
       <path
         d="M0 0h1080v1080H0z"
@@ -396,4 +398,5 @@ GirlPainting.defaultProps = {
   height: '',
   color1: '#F3AE15',
   color2: '#74C3E5',
+  svgRef: null,
 };

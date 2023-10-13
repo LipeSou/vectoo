@@ -16,6 +16,7 @@ export default function ExhibitionScreens({ activeTab, images }: ExhibitionScree
     const color = activeImage?.colors.filter((image) => image.colorName === colorName);
     return (color as Colors[])[0].color;
   };
+
   return (
     <div className={styles.exhibitionScreensContainer}>
       <div className={styles.exibitionScreenHeader}>
@@ -26,7 +27,7 @@ export default function ExhibitionScreens({ activeTab, images }: ExhibitionScree
         <div className={styles.images}>
           {activeTab === StateImage.PAINTING && <GirlPainting color1={getColour('color1')} color2={getColour('color2')} width="80%" />}
           {activeTab === StateImage.MEDITATION && <GirlMeditating color1={getColour('color1')} color2={getColour('color2')} color3={getColour('color3')} />}
-          {activeTab === StateImage.TRAINING && <GirlPainting width="60%" />}
+          {/* {activeTab === StateImage.TRAINING && <GirlPainting width="60%" />} */}
 
         </div>
         <div className={styles.webDescriptionContainer}>
