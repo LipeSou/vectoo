@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import styles from './header.module.css';
-import logo from '../../assets/logos/vectooLogo.svg';
+import logo from '../../assets/logos/logopencil.svg';
 
 export default function Header() {
   const pathname = usePathname();
@@ -14,8 +14,10 @@ export default function Header() {
 
       <div className={styles.logoAndNabBarContainer}>
         {/* logo */}
-        <Image src={logo} alt="logo vectoo" width={144} />
-
+        <Link href="/" className={styles.logo}>
+          <Image src={logo} alt="logo vectoo" />
+          <div style={{ marginLeft: '8px', fontWeight: 'bolder' }}>Vectoo</div>
+        </Link>
         {/* logo hamburger menu mobile */}
         <label htmlFor="menuMobile" className={styles.menuMobileLabel}>
           <input id="menuMobile" type="checkbox" className={styles.menuMobile} />
