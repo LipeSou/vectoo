@@ -4,15 +4,16 @@
     height: 36.4rem;
     border: 1px solid var(--gray-50);
     border-radius: 8px;
-    box-shadow: var(--shadow-black);
+    /* box-shadow: var(--shadow-black); */
     margin-bottom: 6.4rem;
+    background: var(--background-header);
+    backdrop-filter: blur(4px);
 }
 
 .header {
     height: 4.8rem;
     border-bottom: 1px solid var(--gray-50);
     display: flex;
-    /* gap: 8px; */
     align-items: center;
     padding-left: 16px;
 }
