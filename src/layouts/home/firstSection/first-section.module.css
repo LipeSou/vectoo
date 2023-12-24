@@ -43,7 +43,7 @@
 .buttonGetImages:hover {
     color: #ffffff;
     background-color: var(--primary-50);
-    border: 1px solid var(--black-50);
+    border: 1px solid var(--black-100);
 }
 
 @keyframes shadow-change {
