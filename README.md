@@ -4,7 +4,7 @@
 
 ## Welcome to the [Vectoo](https://vectoo.vercel.app/)! Your website open source images!
 
-A dedicated website so I can provide vector drawings made by me in an open source way
+Vectoo is dedicated to offering a collection of original vector designs, crafted with love and available for free for your projects.
 
 ## Local Development
 
