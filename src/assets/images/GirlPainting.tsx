@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import * as React from 'react';
 
 interface GirlPaintingProps {
@@ -5,11 +6,15 @@ interface GirlPaintingProps {
   height?: string;
   color1?: string;
   color2?: string;
-  svgRef?: React.MutableRefObject<null>
+  svgRef?: React.MutableRefObject<null> | null;
 }
 
 export default function GirlPainting({
-  width, height, color1, color2, svgRef,
+  width = '',
+  height = '',
+  color1 = '#F3AE15',
+  color2 = '#74C3E5',
+  svgRef = null,
 }:GirlPaintingProps) {
   return (
     <svg
@@ -392,11 +397,3 @@ export default function GirlPainting({
     </svg>
   );
 }
-
-GirlPainting.defaultProps = {
-  width: '',
-  height: '',
-  color1: '#F3AE15',
-  color2: '#74C3E5',
-  svgRef: null,
-};

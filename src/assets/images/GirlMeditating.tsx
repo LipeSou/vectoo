@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import * as React from 'react';
 
 interface GirlMeditatingProps {
@@ -9,7 +10,11 @@ interface GirlMeditatingProps {
 }
 
 export default function GirlMeditating({
-  width, height, color1, color2, color3,
+  width = '',
+  height = '',
+  color1 = '#F3AE15',
+  color2 = '#74C3E5',
+  color3 = '#fadfa1',
 }:GirlMeditatingProps) {
   return (
     <svg
@@ -288,11 +293,3 @@ export default function GirlMeditating({
     </svg>
   );
 }
-
-GirlMeditating.defaultProps = {
-  width: '',
-  height: '',
-  color1: '#F3AE15',
-  color2: '#74C3E5',
-  color3: '#fadfa1',
-};
