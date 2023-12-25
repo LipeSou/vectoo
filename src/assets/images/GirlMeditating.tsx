@@ -3,18 +3,18 @@ import * as React from 'react';
 
 interface GirlMeditatingProps {
   width?: string;
-  height?: string;
   color1?: string;
   color2?: string;
   color3?: string;
+  svgRef?: React.MutableRefObject<null> | null;
 }
 
 export default function GirlMeditating({
-  width = '',
-  height = '',
-  color1 = '#F3AE15',
-  color2 = '#74C3E5',
-  color3 = '#fadfa1',
+  width,
+  color1,
+  color2,
+  color3,
+  svgRef,
 }:GirlMeditatingProps) {
   return (
     <svg
@@ -28,8 +28,8 @@ export default function GirlMeditating({
         strokeMiterlimit: 1.5,
       }}
       viewBox="0 0 540 540"
-      width={width}
-      height={height}
+      width={width || '100%'}
+      ref={svgRef && svgRef}
     >
       <path
         d="M420.203 571.758C359.76 568.929 315 555.76 315 549.861 315 521.79 438.223 499 590 499s254.043 31.834 254.043 59.905"
@@ -59,7 +59,7 @@ export default function GirlMeditating({
       <path
         d="m495 636 1 47 108-6-2-56-107 15Z"
         style={{
-          fill: color2,
+          fill: color2 || '#74C3E5',
         }}
         transform="matrix(1.04396 0 0 1.05363 -296.548 -290.863)"
       />
@@ -87,7 +87,7 @@ export default function GirlMeditating({
       <path
         d="m493 454 11-5 1 46 79-1v-44l11 6 1 43c16.25 11.521 20.773 46.299 11 73l-6 50-106 15-13-64c-12.654-22.379-7.959-48.115 13-77l-2-42Z"
         style={{
-          fill: color2,
+          fill: color2 || '#74C3E5',
         }}
         transform="translate(-301.333 -290.863) scale(1.05363)"
       />
@@ -132,14 +132,14 @@ export default function GirlMeditating({
       <path
         d="M528 682c9.776 10.636 14.926 21.932 19.152 32 48.114-23.45 86.676-50.223 110.848-82l-27-35c-33.14 29.526-66.727 58.606-103 85Z"
         style={{
-          fill: color1,
+          fill: color1 || '#F3AE15',
         }}
         transform="translate(-301.333 -290.863) scale(1.05363)"
       />
       <path
         d="M535 678 430 574c-4.283-4-9.438-5.539-15-3l-18 14c-2.486 3.307-3.788 6.983-4 11 14.959 42.347 34.753 83.082 57 123l31 41c4.59 2.538 40.971 2.681 54 1 15.857 0 33.1.882 46-1M631 597l30-24c.655-.331 2.569-.976 6-2l21 13c1.965 6.811 3.161 13.536 2 20-4.172 37.872-23.355 84.25-38 124l-74-1-19-18.987L631 597Z"
         style={{
-          fill: color1,
+          fill: color1 || '#F3AE15',
         }}
         transform="translate(-301.333 -290.863) scale(1.05363)"
       />
@@ -273,7 +273,7 @@ export default function GirlMeditating({
         rx={7}
         ry={7.979}
         style={{
-          fill: color2,
+          fill: color2 || '#74C3E5',
           stroke: '#515255',
           strokeWidth: '1.58px',
         }}
@@ -284,7 +284,7 @@ export default function GirlMeditating({
         cy={445}
         r={14}
         style={{
-          fill: color3,
+          fill: color3 || '#fadfa1',
           stroke: '#515255',
           strokeWidth: '1.58px',
         }}

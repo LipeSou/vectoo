@@ -3,18 +3,16 @@ import * as React from 'react';
 
 interface GirlPaintingProps {
   width?: string;
-  height?: string;
   color1?: string;
   color2?: string;
   svgRef?: React.MutableRefObject<null> | null;
 }
 
 export default function GirlPainting({
-  width = '',
-  height = '',
-  color1 = '#F3AE15',
-  color2 = '#74C3E5',
-  svgRef = null,
+  width,
+  color1,
+  color2,
+  svgRef,
 }:GirlPaintingProps) {
   return (
     <svg
@@ -27,9 +25,8 @@ export default function GirlPainting({
         strokeMiterlimit: 1.5,
       }}
       viewBox="0 0 881 1322"
-      width={width}
-      height={height}
-      ref={svgRef}
+      width={width || '100%'}
+      ref={svgRef && svgRef}
     >
       <path
         d="M0 0h1080v1080H0z"
@@ -301,7 +298,7 @@ export default function GirlPainting({
         rx={29.224}
         ry={25.907}
         style={{
-          fill: color1,
+          fill: color1 || '#F3AE15',
         }}
         transform="matrix(.74782 0 0 .28193 -87.804 -30.545)"
       />
@@ -311,7 +308,7 @@ export default function GirlPainting({
         rx={29.224}
         ry={25.907}
         style={{
-          fill: color2,
+          fill: color2 || '#74C3E5',
         }}
         transform="matrix(.62615 0 0 .23606 -58.045 38.784)"
       />
@@ -348,7 +345,7 @@ export default function GirlPainting({
       <path
         d="m830.642 2138.22 70.982-51.52 145.086 3.98 40.89 45.12-256.958 2.42c-51.251 72.69-56.892 151.47-42.663 231.6 2.958 18.23 11.659 44.21 24.052 42.98 87.87 1.32 172.459 1.28 262.619-2.12 19.81-5.04 33.69-.52 48.91-17.02 5.47-44.47 11.94-103.3 8.22-148.44 1.61-41.45-14.81-77.41-44.18-109.42l-256.958 2.42Z"
         style={{
-          fill: color2,
+          fill: color2 || '#74C3E5',
         }}
         transform="matrix(.68336 0 0 1.1627 -236.899 -1884.015)"
       />
@@ -362,21 +359,21 @@ export default function GirlPainting({
       <path
         d="m949.107 1729.97 101.023-5.7c-1.57 4.92 14.57 3.58 32.27.55 29.13-4.84 58.39 7.87 74.73 32.47 21.95 32.84 35.37 70.78 51.42 107.86 8.47-1.84 17.99-7.61 28.49-17 19.69 37.44 32.01 71.62 31.24 111.17l-5.1 2.34-8.71 21.69-18.07 17.21-35.93-14.45c-32.69-46.72-67.14-89.88-87.37-140.99 1.88 42.99-5.79 80.2-18.09 118.94-34.62 96.34-34.43 95.98-32.97 96.85 12.79 64.08 26.35 89.62 41.27 115.31-90.77-9.53-184.772-10.96-281.077-6.65l48.992-127.04 12.871-120.41c-18.546 48.07-34.899 97.6-56.465 143.66-18.714 17.99-41.411 40.77-57.794 40.21-2.189.23 14.04-77.59 10.463-120.34 0 0 72.616-204.57 72.657-204.69.089-.25.186-.5.291-.74 4.223-9.42 16.93-19.48 27.158-24.42 1.615-.76 3.359-1.2 5.139-1.31 14.766-1.6 52.878-15.57 63.562-24.52Z"
         style={{
-          fill: color1,
+          fill: color1 || '#F3AE15',
         }}
         transform="matrix(.70806 0 0 .70805 -260.35 -908.833)"
       />
       <path
         d="m921.743 1745.44 25.242-13.53c1.021 121.75-9.812 242.43-30.757 358.51l-15.439-1.08c16.228-111.47 18.82-225.27 20.954-343.9Z"
         style={{
-          fill: color2,
+          fill: color2 || '#74C3E5',
         }}
         transform="matrix(.70806 0 0 .6281 -260.35 -770.355)"
       />
       <path
         d="m869.924 2046.03 192.136 14.6 3.26 15.63-200.589-16.51 5.193-13.72Z"
         style={{
-          fill: color2,
+          fill: color2 || '#74C3E5',
         }}
         transform="matrix(.70806 0 0 .70805 -260.35 -908.833)"
       />
