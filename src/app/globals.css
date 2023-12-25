@@ -9,9 +9,9 @@
   --black-100: #000000;
   --background: #ffffff;
   --background-header: rgba(255, 255, 255, 0.5);
-  --buttom-shadow-primary: rgb(243, 173, 21) 0px 20px 50px 4px;
-  --buttom-shadow-secondary: rgb(116, 195, 229) 0px 20px 50px 4px;
-  --buttom-shadow-tertiary: rgb(244, 153, 156) 0px 20px 50px 4px;
+  --buttom-shadow-primary: rgb(243, 173, 21) 0px 10px 50px 4px;
+  --buttom-shadow-secondary: rgb(116, 195, 229) 0px 10px 50px 4px;
+  --buttom-shadow-tertiary: rgb(244, 153, 156) 0px 10px 50px 4px;
   --shadow-black: rgb(255, 255, 255) 0px 20px 50px 26px;
   --grayScreen: #a8a9aa;
 }

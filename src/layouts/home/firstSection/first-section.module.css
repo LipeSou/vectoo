@@ -28,6 +28,10 @@
     color: var(--secondary-50);
 }
 
+.madeWithLoveContainer {
+    padding-top: 24px;
+}
+
 .buttonGetImages {
     font-size: 1.8rem;
     padding: 16px 18px 16px 18px;

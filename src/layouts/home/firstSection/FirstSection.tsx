@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import MadeWithLove from '@/components/madeWithLove/madeWithLove';
 import styles from './first-section.module.css';
 import homeImage from '../../../assets/images/homepage.svg';
 
@@ -19,7 +20,11 @@ export default function FirstSection() {
             Totally free images that you can use on your projects.
           </p>
           <Link href="./get-images" className={styles.buttonGetImages}>Get Images</Link>
+          <div className={styles.madeWithLoveContainer}>
+            <MadeWithLove />
+          </div>
         </div>
+
         <div className={styles.imageContainer}>
 
           <Image
@@ -32,6 +37,7 @@ export default function FirstSection() {
             style={{ width: '100%', height: '100%' }}
             priority
           />
+
         </div>
       </main>
     </div>
