@@ -4,7 +4,6 @@ import SecondSection from './secondSection/SecondSection';
 export default function Home() {
   return (
     <>
-      teste
       <FirstSection />
       <SecondSection />
     </>

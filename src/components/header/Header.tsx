@@ -26,13 +26,13 @@ export default function Header() {
           {/* navbar menu */}
           <ul className={styles.navbar}>
             <li className={styles.navbarLiMenu}>
-              <Link href="/" className={pathname ? styles.linkActive : styles.link}>Home</Link>
+              <Link href="/" className={pathname === '/' ? styles.linkActive : styles.link}>Home</Link>
             </li>
             <li className={styles.navbarLiMenu}>
-              <Link href="/about" className={styles.link}>About</Link>
+              <Link href="/about" className={pathname === '/about' ? styles.linkActive : styles.link}>About</Link>
             </li>
             <li className={styles.navbarLiMenu}>
-              <Link href="/images" className={styles.link}>Get Images</Link>
+              <Link href="/images" className={pathname === '/images' ? styles.linkActive : styles.link}>Get Images</Link>
             </li>
 
             {/* checkbox change theme */}
