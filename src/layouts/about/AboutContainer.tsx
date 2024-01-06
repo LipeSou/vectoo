@@ -1,5 +1,8 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import Informations from './Informations';
 import styles from './about-container.module.css';
+import Linkedin from '../../assets/icons/linkedin.svg';
 
 export default function AboutContainer() {
   return (
@@ -16,7 +19,19 @@ Vectoo is dedicated to offering a collection of original vector designs, crafted
           <Informations.Title title="About license" />
           <Informations.Info info="You're granted full freedom to use them without any attribution or costs. However, that you refrain from attempting to replicate our platform, redistribute the illustrations, or develop integrations for them." />
         </section>
+        <Informations.Divider />
+        <section>
+          <Informations.Title title="Contact" />
+          <Link
+            className={styles.link}
+            href="https://www.linkedin.com/in/felipe-sou/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image src={Linkedin} alt="link para o linkedin" />
+          </Link>
 
+        </section>
         {/* <section>
           <h2>Contato</h2>
           <p>

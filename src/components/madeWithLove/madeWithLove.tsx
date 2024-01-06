@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './madeWithLove.module.css';
 
 export default function MadeWithLove() {
@@ -5,7 +6,7 @@ export default function MadeWithLove() {
     <p>
       Made with 💛 by
       {' '}
-      <a
+      <Link
         className={styles.link}
         href="https://www.linkedin.com/in/felipe-sou/"
         target="_blank"
@@ -13,7 +14,7 @@ export default function MadeWithLove() {
       >
         Felipe Souto
 
-      </a>
+      </Link>
     </p>
   );
 }

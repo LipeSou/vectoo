@@ -7,3 +7,13 @@
 .grid {
     grid-column-start: 2;
 }
+
+.link {
+    background-color: var(--primary-50);
+    height: 50%;
+}
+
+.link:hover {
+    height: 164px;
+    width: 164px;
+}
