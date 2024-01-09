@@ -4,7 +4,6 @@
     position: fixed;
     display: grid;
     grid-template-columns: 1fr 1220px 1fr;
-    justify-content: space-between;
     align-items: center;
     background-color: var(--background-header);
     backdrop-filter: blur(8px);

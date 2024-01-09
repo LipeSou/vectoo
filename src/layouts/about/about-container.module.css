@@ -8,12 +8,23 @@
     grid-column-start: 2;
 }
 
+
+.linkContainer {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
 .link {
-    background-color: var(--primary-50);
-    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .link:hover {
-    height: 164px;
-    width: 164px;
+    color: var(--primary-50);
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
 }

@@ -1,8 +1,9 @@
+'use client';
+
 import Link from 'next/link';
-import Image from 'next/image';
+import { GithubLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react';
 import Informations from './Informations';
 import styles from './about-container.module.css';
-import Linkedin from '../../assets/icons/linkedin.svg';
 
 export default function AboutContainer() {
   return (
@@ -21,25 +22,44 @@ Vectoo is dedicated to offering a collection of original vector designs, crafted
         </section>
         <Informations.Divider />
         <section>
-          <Informations.Title title="Contact" />
-          <Link
-            className={styles.link}
-            href="https://www.linkedin.com/in/felipe-sou/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={Linkedin} alt="link para o linkedin" />
-          </Link>
+          <Informations.Title title="Contact Me" />
+          <div className={styles.linkContainer}>
+            <Link
+              className={styles.link}
+              href="https://www.linkedin.com/in/felipe-sou/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Linkedin</p>
+              {' '}
+              <LinkedinLogo size={24} />
+            </Link>
+
+            <Link
+              className={styles.link}
+              href="https://github.com/LipeSou"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Github</p>
+              {' '}
+              <GithubLogo size={24} />
+            </Link>
+
+            <Link
+              className={styles.link}
+              href="https://www.instagram.com/felipesou__/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Instagram</p>
+              {' '}
+              <InstagramLogo size={24} />
+            </Link>
+          </div>
 
         </section>
-        {/* <section>
-          <h2>Contato</h2>
-          <p>
-            Entre em contato conosco em
-            {' '}
-            <a href="mailto:contato@empresa.com">contato@empresa.com</a>
-          </p>
-        </section> */}
+
       </div>
     </div>
   );
