@@ -1,15 +1,23 @@
 import GirlPainting from '@/assets/images/GirlPainting';
 import GirlMeditating from '@/assets/images/GirlMeditating';
+import { Dispatch, SetStateAction } from 'react';
 import styles from './exhibitionScreens.module.css';
 import { Colors, ImagesExtructure, StateImage } from '../__types__/images';
+import InputColorsContainer from '../InputColorsContainer/InputColorsContainer';
 
 interface ExhibitionScreensProps {
   activeTab: StateImage;
   images: ImagesExtructure[];
-
+  setImages: Dispatch<SetStateAction<ImagesExtructure[]>>
 }
 
-export default function ExhibitionScreens({ activeTab, images }: ExhibitionScreensProps) {
+export default function ExhibitionScreens(
+  {
+    activeTab,
+    images,
+    setImages,
+  }: ExhibitionScreensProps,
+) {
   const activeImage = images.find((image) => image.nameLabel === activeTab);
 
   const getColour = (colorName: string): string => {
@@ -31,10 +39,11 @@ export default function ExhibitionScreens({ activeTab, images }: ExhibitionScree
 
         </div>
         <div className={styles.webDescriptionContainer}>
-          <div className={styles.webTitleOrange} />
+          {/* <div className={styles.webTitleOrange} />
           <div className={styles.webTitle} />
           <div className={styles.webTitle} />
-          <div className={styles.webTitle} />
+          <div className={styles.webTitle} /> */}
+          <InputColorsContainer images={images} setImages={setImages} activeTab={activeTab} />
         </div>
       </div>
     </div>
