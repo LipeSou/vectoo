@@ -33,9 +33,7 @@
 
 .webContainer {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 15px;
-    height: 70%;
-    margin-left: 20px;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
 }
 
 .webDescriptionContainer { 
@@ -62,8 +60,17 @@
     border-radius: 10px;
 }
 
-.images {
+.background {
     grid-column-start: 2;
+    justify-self: center;
+    align-self: center;
+    border: 1px solid var(--black-100);
+    padding: 3.0rem;
+    border-radius: 14px;
+}
+
+.images {
+    grid-column-start: 3;
     justify-self: center;
     align-self: center;
 }

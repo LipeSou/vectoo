@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction } from 'react';
 import styles from './exhibitionScreens.module.css';
 import { Colors, ImagesExtructure, StateImage } from '../__types__/images';
 import InputColorsContainer from '../InputColorsContainer/InputColorsContainer';
+import Background from '../background/Background';
 
 interface ExhibitionScreensProps {
   activeTab: StateImage;
@@ -32,17 +33,15 @@ export default function ExhibitionScreens(
         <div className={styles.navBar} />
       </div>
       <div className={styles.webContainer}>
+        <div className={styles.background}>
+          <Background />
+        </div>
         <div className={styles.images}>
           {activeTab === StateImage.PAINTING && <GirlPainting color1={getColour('color1')} color2={getColour('color2')} width="80%" />}
           {activeTab === StateImage.MEDITATION && <GirlMeditating color1={getColour('color1')} color2={getColour('color2')} color3={getColour('color3')} />}
-          {/* {activeTab === StateImage.TRAINING && <GirlPainting width="60%" />} */}
 
         </div>
         <div className={styles.webDescriptionContainer}>
-          {/* <div className={styles.webTitleOrange} />
-          <div className={styles.webTitle} />
-          <div className={styles.webTitle} />
-          <div className={styles.webTitle} /> */}
           <InputColorsContainer images={images} setImages={setImages} activeTab={activeTab} />
         </div>
       </div>

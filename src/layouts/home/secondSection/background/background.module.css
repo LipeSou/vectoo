@@ -1,0 +1,9 @@
+.label {
+    grid-column-start: 2;
+    display: flex;
+    gap: 8px;
+}
+
+.label:hover {
+    color: var(--secondary-50)
+}
