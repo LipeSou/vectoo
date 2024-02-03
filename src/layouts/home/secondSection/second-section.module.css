@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--background-shadown);
-    box-shadow: inset 0px 16px 100px 16px var(--background);
+    background: radial-gradient(ellipse at top, var(--background-shadown) 40%, var(--background) 80%);
+    /* box-shadow: inset 0px 16px 100px 16px var(--background); */
     padding-bottom: 120px;
+    position: relative;
 }
 
 .title {
@@ -18,6 +19,8 @@
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
 }
+
+
 
 @media screen and (max-width: 700px) {
     .title, .description{

@@ -27,24 +27,27 @@ export default function ExhibitionScreens(
   };
 
   return (
-    <div className={styles.exhibitionScreensContainer}>
-      <div className={styles.exibitionScreenHeader}>
-        <div className={styles.iconBall} />
-        <div className={styles.navBar} />
-      </div>
-      <div className={styles.webContainer}>
-        <div className={styles.background}>
-          <Background />
+    <>
+      <div className={styles.exhibitionScreensContainer}>
+        <div className={styles.exibitionScreenHeader}>
+          <div className={styles.iconBall} />
+          <div className={styles.navBar} />
         </div>
-        <div className={styles.images}>
-          {activeTab === StateImage.PAINTING && <GirlPainting color1={getColour('color1')} color2={getColour('color2')} width="80%" />}
-          {activeTab === StateImage.MEDITATION && <GirlMeditating color1={getColour('color1')} color2={getColour('color2')} color3={getColour('color3')} />}
+        <div className={styles.webContainer}>
+          <div className={styles.background}>
+            <Background />
+          </div>
+          <div className={styles.images}>
+            {activeTab === StateImage.PAINTING && <GirlPainting color1={getColour('color1')} color2={getColour('color2')} width="80%" />}
+            {activeTab === StateImage.MEDITATION && <GirlMeditating color1={getColour('color1')} color2={getColour('color2')} color3={getColour('color3')} />}
 
-        </div>
-        <div className={styles.webDescriptionContainer}>
-          <InputColorsContainer images={images} setImages={setImages} activeTab={activeTab} />
+          </div>
+          <div className={styles.webDescriptionContainer}>
+            <InputColorsContainer images={images} setImages={setImages} activeTab={activeTab} />
+          </div>
         </div>
       </div>
-    </div>
+      <div className={styles.spacer} />
+    </>
   );
 }
