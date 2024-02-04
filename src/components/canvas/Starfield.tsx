@@ -53,7 +53,7 @@ function Starfield() {
     const shootingStarEmittingInterval = 2000;
     const shootingStarLifeTime = 500;
     const maxTrailLength = 300;
-    const starBaseRadius = widthScreen <= 750 ? 1.5 : 3;
+    const starBaseRadius = widthScreen <= 750 ? 1 : 3;
     const shootingStarRadius = 3;
 
     // Create all stars
@@ -66,7 +66,7 @@ function Starfield() {
           0,
           0,
         );
-        console.log(layer.scale);
+
         star.radius = starBaseRadius * layer.scale;
         star.setSpeed(layer.speed);
         star.setHeading(degreesToRads(starsAngle));
@@ -226,6 +226,7 @@ function Starfield() {
       window.onfocus = null;
       window.onblur = null;
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <canvas ref={canvasRef} className={styles.canvas} />;
