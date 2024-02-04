@@ -6,6 +6,15 @@ import particle from './particles';
 
 function Starfield() {
   const canvasRef = useRef(null);
+  // const { width } = screen;
+  // console.log(width);
+  const widthScreen = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+  //   const height = window.innerHeight
+  // || document.documentElement.clientHeight
+  // || document.body.clientHeight;
 
   useEffect(() => {
     const canvas: HTMLCanvasElement = canvasRef.current!;
@@ -44,7 +53,7 @@ function Starfield() {
     const shootingStarEmittingInterval = 2000;
     const shootingStarLifeTime = 500;
     const maxTrailLength = 300;
-    const starBaseRadius = 3;
+    const starBaseRadius = widthScreen <= 750 ? 1.5 : 3;
     const shootingStarRadius = 3;
 
     // Create all stars
@@ -57,6 +66,7 @@ function Starfield() {
           0,
           0,
         );
+        console.log(layer.scale);
         star.radius = starBaseRadius * layer.scale;
         star.setSpeed(layer.speed);
         star.setHeading(degreesToRads(starsAngle));
