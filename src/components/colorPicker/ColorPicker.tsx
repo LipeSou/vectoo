@@ -36,8 +36,20 @@ export default function ColorPicker({ color, colorName, setColor }: ColorPickerP
         type="button"
         onClick={() => setShowSketchPicker(true)}
         aria-label="Selecione uma Cor"
+        style={{
+          background: 'transparent',
+          border: '0.8px solid white',
+          borderRadius: '2px',
+        }}
       >
-        <div style={{ backgroundColor: color, width: '24px', height: '24px' }} />
+        <div style={{
+          backgroundColor: color,
+          width: '24px',
+          height: '24px',
+          border: '3px solid black',
+          borderRadius: '2px',
+        }}
+        />
       </button>
       {showSketchPicker && (
         <div className={styles.colorPickerContainer}>

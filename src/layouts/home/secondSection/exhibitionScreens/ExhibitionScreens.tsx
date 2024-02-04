@@ -34,9 +34,7 @@ export default function ExhibitionScreens(
           <div className={styles.navBar} />
         </div>
         <div className={styles.webContainer}>
-          <div className={styles.background}>
-            <Background />
-          </div>
+          <Background />
           <div className={styles.images}>
             {activeTab === StateImage.PAINTING && <GirlPainting color1={getColour('color1')} color2={getColour('color2')} width="80%" />}
             {activeTab === StateImage.MEDITATION && <GirlMeditating color1={getColour('color1')} color2={getColour('color2')} color3={getColour('color3')} />}

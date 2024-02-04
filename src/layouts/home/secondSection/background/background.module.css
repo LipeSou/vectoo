@@ -1,3 +1,12 @@
+.background {
+    grid-column-start: 2;
+    justify-self: center;
+    align-self: center;
+    border: 1px solid var(--black-100);
+    padding: 2.4rem;
+    border-radius: 14px;
+}
+
 .label {
     grid-column-start: 2;
     display: flex;

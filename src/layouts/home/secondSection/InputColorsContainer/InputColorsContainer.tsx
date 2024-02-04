@@ -3,6 +3,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import ColorPicker from '@/components/colorPicker/ColorPicker';
 import { ImagesExtructure, StateImage } from '../__types__/images';
+import styles from './input_colors_container.module.css';
 
 interface InputColorsContainerProps {
   images: ImagesExtructure[],
@@ -34,16 +35,19 @@ export default function InputColorsContainer(
   };
 
   return (
-    <div style={{ display: 'flex' }}>
+    <div className={styles.container}>
+      <span>Change your color</span>
+      <div className={styles.colorsContainer}>
+        {activeImage?.colors.map((color) => (
+          <ColorPicker
+            color={color.color}
+            colorName={color.colorName}
+            key={color.colorName}
+            setColor={setColor}
+          />
+        ))}
 
-      {activeImage?.colors.map((color) => (
-        <ColorPicker
-          color={color.color}
-          colorName={color.colorName}
-          key={color.colorName}
-          setColor={setColor}
-        />
-      ))}
+      </div>
     </div>
   );
 }
