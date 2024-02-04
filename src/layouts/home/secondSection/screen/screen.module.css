@@ -11,7 +11,7 @@
     border-radius: 8px;
     /* box-shadow: var(--shadow-black); */
     margin-bottom: 6.4rem;
-    background: var(--background-header);
+    background: var(--background-stars);
     backdrop-filter: blur(4px);
 }
 

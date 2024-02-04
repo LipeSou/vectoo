@@ -35,8 +35,8 @@ export default function Header() {
               <Link href="/images" className={pathname === '/images' ? styles.linkActive : styles.link}>Get Images</Link>
             </li>
 
-            {/* checkbox change theme */}
-            <div className="themeContainer">
+            {/* checkbox change theme !FOR THE FUTURE! */}
+            {/* <div className="themeContainer">
               <label htmlFor="theme" className="themeSwitch">
                 <p className={styles.mobileChangeTheme}>Theme</p>
                 <div className="themeSwitchWrapper">
@@ -44,7 +44,7 @@ export default function Header() {
                   <div className="themeSwitchButton" />
                 </div>
               </label>
-            </div>
+            </div> */}
           </ul>
 
         </label>
