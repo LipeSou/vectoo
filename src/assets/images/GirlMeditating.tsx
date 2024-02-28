@@ -3,9 +3,10 @@ import * as React from 'react';
 
 interface GirlMeditatingProps {
   width?: string;
-  color1?: string;
-  color2?: string;
-  color3?: string;
+  color1: string;
+  color2: string;
+  color3: string;
+  background?: boolean;
   svgRef?: React.MutableRefObject<null> | null;
 }
 
@@ -14,6 +15,7 @@ export default function GirlMeditating({
   color1,
   color2,
   color3,
+  background,
   svgRef,
 }:GirlMeditatingProps) {
   return (
@@ -31,24 +33,29 @@ export default function GirlMeditating({
       width={width || '100%'}
       ref={svgRef && svgRef}
     >
-      <path
-        d="M420.203 571.758C359.76 568.929 315 555.76 315 549.861 315 521.79 438.223 499 590 499s254.043 31.834 254.043 59.905"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '6.34px',
-        }}
-        transform="rotate(-20.587 -351.409 1382.461) scale(1.05363)"
-      />
-      <path
-        d="M790 469c16.232 38.044-22.925 65.676-116 97.76"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '6.34px',
-        }}
-        transform="translate(-301.333 -290.863) scale(1.05363)"
-      />
+      {background && (
+      <>
+        <path
+          d="M420.203 571.758C359.76 568.929 315 555.76 315 549.861
+         315 521.79 438.223 499 590 499s254.043 31.834 254.043 59.905"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '6.34px',
+          }}
+          transform="rotate(-20.587 -351.409 1382.461) scale(1.05363)"
+        />
+        <path
+          d="M790 469c16.232 38.044-22.925 65.676-116 97.76"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '6.34px',
+          }}
+          transform="translate(-301.333 -290.863) scale(1.05363)"
+        />
+      </>
+      )}
       <path
         d="M503 322c26.523-40.565 60.165-39.708 101 3 5.614 11.261 8.193 23.703 6 38-1.94 14.333-2.662 28.667-2 43 2.056 22.784 6.041 45.782 12 69l-124-8c-1.669-19.8-4.994-39.766-11-60-3.458-34.718 4.109-61.993 18-85Z"
         style={{
@@ -220,76 +227,81 @@ export default function GirlMeditating({
         }}
         transform="translate(-301.333 -290.863) scale(1.05363)"
       />
-      <circle
-        cx={305.361}
-        cy={622.083}
-        r={8.361}
-        style={{
-          fill: '#e4e1e2',
-          stroke: '#515255',
-          strokeWidth: '.79px',
-        }}
-        transform="translate(-605.832 -962.758) scale(2.10726)"
-      />
-      <path
-        d="M305 596c-4.168-1.047-6.56.443-7 4.722.527 5.437 36.048 23.091 40.444 19.278 3.69-1.452 4.725-4.352 2.556-9"
-        style={{
-          fill: 'none',
-          stroke: '#515255',
-          strokeWidth: '1.58px',
-        }}
-        transform="translate(-301.333 -290.863) scale(1.05363)"
-      />
-      <path
-        d="m683.5 447 2.566 8.029L693 458l-6.934 2.971L683.5 469l-2.566-8.029L674 458l6.934-2.971L683.5 447Z"
-        style={{
-          fill: '#e4e1e2',
-          stroke: '#515255',
-          strokeWidth: '1.58px',
-        }}
-        transform="translate(-302.387 -294.024) scale(1.05363)"
-      />
-      <path
-        d="m803.219 488 .759 4.204 2.461 1.296-2.461 1.296-.759 4.204-.758-4.204L800 493.5l2.461-1.296.758-4.204Z"
-        style={{
-          fill: '#e4e1e2',
-          stroke: '#515255',
-          strokeWidth: '1.58px',
-        }}
-        transform="translate(-329.19 -266.229) scale(1.05363)"
-      />
-      <path
-        d="m715 545.513 2.161 5.287 5.839 1.956-5.839 1.957L715 560l-2.161-5.287-5.839-1.957 5.839-1.956 2.161-5.287ZM402 552.756l1.35 4.834 3.65 1.788-3.65 1.789L402 566l-1.35-4.833-3.65-1.789 3.65-1.788 1.35-4.834Z"
-        style={{
-          fill: '#e4e1e2',
-          stroke: '#515255',
-          strokeWidth: '1.58px',
-        }}
-        transform="translate(-301.333 -290.863) scale(1.05363)"
-      />
-      <ellipse
-        cx={358}
-        cy={640.979}
-        rx={7}
-        ry={7.979}
-        style={{
-          fill: color2 || '#74C3E5',
-          stroke: '#515255',
-          strokeWidth: '1.58px',
-        }}
-        transform="translate(-301.333 -290.863) scale(1.05363)"
-      />
-      <circle
-        cx={790}
-        cy={445}
-        r={14}
-        style={{
-          fill: color3 || '#fadfa1',
-          stroke: '#515255',
-          strokeWidth: '1.58px',
-        }}
-        transform="translate(-326.62 -280.327) scale(1.05363)"
-      />
+      {background && (
+      <>
+        {' '}
+        <circle
+          cx={305.361}
+          cy={622.083}
+          r={8.361}
+          style={{
+            fill: '#e4e1e2',
+            stroke: '#515255',
+            strokeWidth: '.79px',
+          }}
+          transform="translate(-605.832 -962.758) scale(2.10726)"
+        />
+        <path
+          d="M305 596c-4.168-1.047-6.56.443-7 4.722.527 5.437 36.048 23.091 40.444 19.278 3.69-1.452 4.725-4.352 2.556-9"
+          style={{
+            fill: 'none',
+            stroke: '#515255',
+            strokeWidth: '1.58px',
+          }}
+          transform="translate(-301.333 -290.863) scale(1.05363)"
+        />
+        <path
+          d="m683.5 447 2.566 8.029L693 458l-6.934 2.971L683.5 469l-2.566-8.029L674 458l6.934-2.971L683.5 447Z"
+          style={{
+            fill: '#e4e1e2',
+            stroke: '#515255',
+            strokeWidth: '1.58px',
+          }}
+          transform="translate(-302.387 -294.024) scale(1.05363)"
+        />
+        <path
+          d="m803.219 488 .759 4.204 2.461 1.296-2.461 1.296-.759 4.204-.758-4.204L800 493.5l2.461-1.296.758-4.204Z"
+          style={{
+            fill: '#e4e1e2',
+            stroke: '#515255',
+            strokeWidth: '1.58px',
+          }}
+          transform="translate(-329.19 -266.229) scale(1.05363)"
+        />
+        <path
+          d="m715 545.513 2.161 5.287 5.839 1.956-5.839 1.957L715 560l-2.161-5.287-5.839-1.957 5.839-1.956 2.161-5.287ZM402 552.756l1.35 4.834 3.65 1.788-3.65 1.789L402 566l-1.35-4.833-3.65-1.789 3.65-1.788 1.35-4.834Z"
+          style={{
+            fill: '#e4e1e2',
+            stroke: '#515255',
+            strokeWidth: '1.58px',
+          }}
+          transform="translate(-301.333 -290.863) scale(1.05363)"
+        />
+        <ellipse
+          cx={358}
+          cy={640.979}
+          rx={7}
+          ry={7.979}
+          style={{
+            fill: color2 || '#74C3E5',
+            stroke: '#515255',
+            strokeWidth: '1.58px',
+          }}
+          transform="translate(-301.333 -290.863) scale(1.05363)"
+        />
+        <circle
+          cx={790}
+          cy={445}
+          r={14}
+          style={{
+            fill: color3 || '#fadfa1',
+            stroke: '#515255',
+            strokeWidth: '1.58px',
+          }}
+          transform="translate(-326.62 -280.327) scale(1.05363)"
+        />
+      </>
+      )}
     </svg>
   );
 }

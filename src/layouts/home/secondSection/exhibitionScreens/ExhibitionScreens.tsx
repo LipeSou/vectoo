@@ -35,11 +35,11 @@ export default function ExhibitionScreens(
         </div>
         <div className={styles.webContainer}>
           <div className={styles.backgroundContainer}>
-            <Background />
+            <Background activeImage={activeImage} setImages={setImages} />
           </div>
           <div className={styles.images}>
-            {activeTab === StateImage.PAINTING && <GirlPainting color1={getColour('color1')} color2={getColour('color2')} width="80%" />}
-            {activeTab === StateImage.MEDITATION && <GirlMeditating color1={getColour('color1')} color2={getColour('color2')} color3={getColour('color3')} />}
+            {activeTab === StateImage.PAINTING && <GirlPainting background={activeImage?.background} color1={getColour('color1')} color2={getColour('color2')} width="80%" />}
+            {activeTab === StateImage.MEDITATION && <GirlMeditating background={activeImage?.background} color1={getColour('color1')} color2={getColour('color2')} color3={getColour('color3')} />}
 
           </div>
           <div className={styles.webDescriptionContainer}>

@@ -5,6 +5,7 @@ interface GirlPaintingProps {
   width?: string;
   color1?: string;
   color2?: string;
+  background?: boolean;
   svgRef?: React.MutableRefObject<null> | null;
 }
 
@@ -13,6 +14,7 @@ export default function GirlPainting({
   color1,
   color2,
   svgRef,
+  background,
 }:GirlPaintingProps) {
   return (
     <svg
@@ -28,192 +30,196 @@ export default function GirlPainting({
       width={width || '100%'}
       ref={svgRef && svgRef}
     >
-      <path
-        d="M0 0h1080v1080H0z"
-        style={{
-          fill: 'none',
-        }}
-        transform="scale(.81574 1.22407)"
-      />
-      <ellipse
-        cx={1450.86}
-        cy={1380.97}
-        rx={42.577}
-        ry={41.96}
-        style={{
-          fill: '#e4e1e2',
-        }}
-        transform="matrix(1.16937 0 0 1.29595 -935.587 -1666.488)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.83px',
-        }}
-        transform="matrix(1.03033 0 0 1.089 -724.66 -1374.214)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.63px',
-        }}
-        transform="matrix(.9366 .45381 -.42937 .98993 -1.54 -1888.662)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.57px',
-        }}
-        transform="matrix(.68495 .81352 -.7697 .72395 827.203 -2043.171)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.65px',
-        }}
-        transform="scale(1.03033 1.089) rotate(68.457 2015.952 226.472)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.87px',
-        }}
-        transform="scale(-1.03033 -1.089) rotate(-85.39 -450.335 1811.096)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: 10,
-        }}
-        transform="scale(-1.03033 -1.089) rotate(-70.699 -699.113 2168.531)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '10.11px',
-        }}
-        transform="matrix(-.70855 .79061 -.74802 -.7489 2814.43 12.654)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '10.02px',
-        }}
-        transform="matrix(-.96056 .39391 -.3727 -1.01525 2662.89 947.066)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.82px',
-        }}
-        transform="matrix(-1.03027 -.01142 .0108 -1.08894 2236.19 1635.877)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.65px',
-        }}
-        transform="matrix(-.964 -.3844 .3637 -1.0189 1651.6 2080.383)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.57px',
-        }}
-        transform="scale(-1.03033 -1.089) rotate(45.954 2102.895 -1946.32)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.67px',
-        }}
-        transform="matrix(-.32926 -1.0319 .9763 -.348 -97.128 2088.54)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.85px',
-        }}
-        transform="scale(1.03033 1.089) rotate(-87.515 436.046 1108.857)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '10.02px',
-        }}
-        transform="scale(1.03033 1.089) rotate(-67.734 152.77 1266.993)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.54px',
-        }}
-        transform="matrix(.76495 -.80466 .77767 .7417 -1404.675 262.709)"
-      />
-      <path
-        d="m1360.85 1326.35 28.81 16.93"
-        style={{
-          fill: 'none',
-          stroke: '#e4e1e2',
-          strokeWidth: '9.38px',
-        }}
-        transform="matrix(1.00915 -.40435 .4233 1.01269 -1270.893 -683.95)"
-      />
-      <path
-        d="M512.027 1944.9c-93.589-8.76-156.423-23.44-154.882-63.05-7.361-26.24-1.339-45.77 22.176-61.71-24.368-37.52-34.813-69.83 15.426-102.2-49.135-29.25-34.561-61.38-9.641-90.63-51.808-68.02-23.707-100.52 17.354-127.27-32.51-53.14-.694-68.08 49.172-72.31 21.82-32.3 54.028-18.16 88.703 8.68 39.21-18.65 67.492-26.68 96.415.96 61.224 5.8 94.005 19.26 93.523 63.63 33.175 19.1 44.78 42.26 5.785 74.24l-.964 30.86c39.967 39.47 41.022 72.04 11.57 108.95 11.57 24.82 17.355 54.23-1.929 71.34-7.686 57.51-18.024 72.98-53.992 63.64-14.507 15.99-7.335 59.86-24.413 52.72l-22.214 5.17c-13.056 46.58-85.583 39.51-119.208 34.67"
-        style={{
-          fill: '#e4e1e2',
-        }}
-        transform="matrix(.75128 0 0 .72044 -227.475 -834.027)"
-      />
-      <path
-        d="M522.98 2044.79c-4.065-156.9 12.419-310.72 59.777-459.9l-8.99 29.64 37.915-10.36"
-        style={{
-          fill: 'none',
-          stroke: '#515255',
-          strokeWidth: '24.86px',
-        }}
-        transform="matrix(.75128 0 0 .72044 -227.475 -834.027)"
-      />
-      <path
-        d="m548.164 1657.82-75.32-43.04M444.883 1764.22c47.194 75.39 67.225 152.47 73.276 230.43l9.642 9.64c-2.913-107.32 34.728-188.67 124.376-242"
-        style={{
-          fill: 'none',
-          stroke: '#515255',
-          strokeWidth: '11.32px',
-        }}
-        transform="matrix(.75128 0 0 .72044 -227.475 -834.027)"
-      />
+      { background && (
+      <>
+        <path
+          d="M0 0h1080v1080H0z"
+          style={{
+            fill: 'none',
+          }}
+          transform="scale(.81574 1.22407)"
+        />
+        <ellipse
+          cx={1450.86}
+          cy={1380.97}
+          rx={42.577}
+          ry={41.96}
+          style={{
+            fill: '#e4e1e2',
+          }}
+          transform="matrix(1.16937 0 0 1.29595 -935.587 -1666.488)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.83px',
+          }}
+          transform="matrix(1.03033 0 0 1.089 -724.66 -1374.214)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.63px',
+          }}
+          transform="matrix(.9366 .45381 -.42937 .98993 -1.54 -1888.662)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.57px',
+          }}
+          transform="matrix(.68495 .81352 -.7697 .72395 827.203 -2043.171)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.65px',
+          }}
+          transform="scale(1.03033 1.089) rotate(68.457 2015.952 226.472)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.87px',
+          }}
+          transform="scale(-1.03033 -1.089) rotate(-85.39 -450.335 1811.096)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: 10,
+          }}
+          transform="scale(-1.03033 -1.089) rotate(-70.699 -699.113 2168.531)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '10.11px',
+          }}
+          transform="matrix(-.70855 .79061 -.74802 -.7489 2814.43 12.654)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '10.02px',
+          }}
+          transform="matrix(-.96056 .39391 -.3727 -1.01525 2662.89 947.066)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.82px',
+          }}
+          transform="matrix(-1.03027 -.01142 .0108 -1.08894 2236.19 1635.877)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.65px',
+          }}
+          transform="matrix(-.964 -.3844 .3637 -1.0189 1651.6 2080.383)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.57px',
+          }}
+          transform="scale(-1.03033 -1.089) rotate(45.954 2102.895 -1946.32)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.67px',
+          }}
+          transform="matrix(-.32926 -1.0319 .9763 -.348 -97.128 2088.54)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.85px',
+          }}
+          transform="scale(1.03033 1.089) rotate(-87.515 436.046 1108.857)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '10.02px',
+          }}
+          transform="scale(1.03033 1.089) rotate(-67.734 152.77 1266.993)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.54px',
+          }}
+          transform="matrix(.76495 -.80466 .77767 .7417 -1404.675 262.709)"
+        />
+        <path
+          d="m1360.85 1326.35 28.81 16.93"
+          style={{
+            fill: 'none',
+            stroke: '#e4e1e2',
+            strokeWidth: '9.38px',
+          }}
+          transform="matrix(1.00915 -.40435 .4233 1.01269 -1270.893 -683.95)"
+        />
+        <path
+          d="M512.027 1944.9c-93.589-8.76-156.423-23.44-154.882-63.05-7.361-26.24-1.339-45.77 22.176-61.71-24.368-37.52-34.813-69.83 15.426-102.2-49.135-29.25-34.561-61.38-9.641-90.63-51.808-68.02-23.707-100.52 17.354-127.27-32.51-53.14-.694-68.08 49.172-72.31 21.82-32.3 54.028-18.16 88.703 8.68 39.21-18.65 67.492-26.68 96.415.96 61.224 5.8 94.005 19.26 93.523 63.63 33.175 19.1 44.78 42.26 5.785 74.24l-.964 30.86c39.967 39.47 41.022 72.04 11.57 108.95 11.57 24.82 17.355 54.23-1.929 71.34-7.686 57.51-18.024 72.98-53.992 63.64-14.507 15.99-7.335 59.86-24.413 52.72l-22.214 5.17c-13.056 46.58-85.583 39.51-119.208 34.67"
+          style={{
+            fill: '#e4e1e2',
+          }}
+          transform="matrix(.75128 0 0 .72044 -227.475 -834.027)"
+        />
+        <path
+          d="M522.98 2044.79c-4.065-156.9 12.419-310.72 59.777-459.9l-8.99 29.64 37.915-10.36"
+          style={{
+            fill: 'none',
+            stroke: '#515255',
+            strokeWidth: '24.86px',
+          }}
+          transform="matrix(.75128 0 0 .72044 -227.475 -834.027)"
+        />
+        <path
+          d="m548.164 1657.82-75.32-43.04M444.883 1764.22c47.194 75.39 67.225 152.47 73.276 230.43l9.642 9.64c-2.913-107.32 34.728-188.67 124.376-242"
+          style={{
+            fill: 'none',
+            stroke: '#515255',
+            strokeWidth: '11.32px',
+          }}
+          transform="matrix(.75128 0 0 .72044 -227.475 -834.027)"
+        />
+      </>
+      )}
       <path
         d="m1500.85 2552.4 38.7 503.07h-54.91l-14.96-231.54-506.46-.47-11.724 233.25h-30.853l-1.728-498.51 44.65 2.49.79 212.07 501.565-.37-14.97-220.27 49.9.28Z"
         style={{

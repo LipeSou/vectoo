@@ -11,5 +11,6 @@ export interface Colors {
 
 export interface ImagesExtructure {
   colors: Colors[],
+  background?: boolean,
   nameLabel: StateImage;
 }
