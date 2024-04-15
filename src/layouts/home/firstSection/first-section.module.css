@@ -29,7 +29,9 @@
 }
 
 .madeWithLoveContainer {
-    padding-top: 24px;
+    padding-top: 12px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .buttonGetImages {
@@ -123,32 +125,38 @@
         grid-template-columns: 2.4rem 1fr 2.4rem;
     }
 
+    .firsSectionContainer {
+       flex-direction: column;
+    }
+
     .descriptionContainer {
-        gap: 2.0rem;
+        gap: 1.2rem;
         width: 30.0rem;
+        align-items: center;
     }
 
     .descriptionSite {
-        width: 21.0rem;
+        width: 25.0rem;
+        text-align: center;
     }
 
     .title {
-        font-size: 4.0rem;
+        font-size: 4.4rem;
         line-height: 5.0rem;
+        text-align: center;
     }
 
     .imageContainer {
-        position: absolute;
-        right: 0vw;
-        top: 36vh;
         width: 70vw;
+        padding-top: 5.2rem;
     }
 
     .titleContainer {
         width: 230px;
     }
 
-    .buttonGetImages {
-        margin-top: 36vh;
+    .madeWithLoveContainer {
+        padding-top: 16px;
+        font-size: 14px;
     }
 }

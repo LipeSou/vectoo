@@ -20,9 +20,7 @@ export default function FirstSection() {
             Totally free images that you can use on your projects.
           </p>
           <Link href="./get-images" className={styles.buttonGetImages}>Get Images</Link>
-          <div className={styles.madeWithLoveContainer}>
-            <MadeWithLove />
-          </div>
+
         </div>
 
         <div className={styles.imageContainer}>
@@ -37,7 +35,9 @@ export default function FirstSection() {
             style={{ width: '100%', height: '100%' }}
             priority
           />
-
+          <div className={styles.madeWithLoveContainer}>
+            <MadeWithLove />
+          </div>
         </div>
       </main>
     </div>
