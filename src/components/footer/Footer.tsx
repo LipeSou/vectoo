@@ -9,45 +9,82 @@ export default function Footer() {
   return (
     <footer className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.madeWithLove}>
+        <section className={styles.madeWithLove}>
           <MadeWithLove />
-        </div>
+        </section>
+
+        <section>
+          <nav>
+            <h2 className={styles.contactMe}>Resources</h2>
+            <ul className={styles.linkContainer}>
+              <li>
+                <Link
+                  className={styles.link}
+                  href="/"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={styles.link}
+                  href="/about"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={styles.link}
+                  href="/images"
+                >
+                  Get Images
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
         <section>
           <h2 className={styles.contactMe}>Contact Me</h2>
-          <div className={styles.linkContainer}>
-            <Link
-              className={styles.link}
-              href="https://www.linkedin.com/in/felipe-sou/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p>Linkedin</p>
-              {' '}
-              <LinkedinLogo size={24} />
-            </Link>
-
-            <Link
-              className={styles.link}
-              href="https://github.com/LipeSou"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p>Github</p>
-              {' '}
-              <GithubLogo size={24} />
-            </Link>
-
-            <Link
-              className={styles.link}
-              href="https://www.instagram.com/felipesou__/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p>Instagram</p>
-              {' '}
-              <InstagramLogo size={24} />
-            </Link>
-          </div>
+          <ul className={styles.linkContainer}>
+            <li>
+              <Link
+                className={styles.link}
+                href="https://www.linkedin.com/in/felipe-sou/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>Linkedin</p>
+                {' '}
+                <LinkedinLogo size={24} />
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.link}
+                href="https://github.com/LipeSou"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>Github</p>
+                {' '}
+                <GithubLogo size={24} />
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.link}
+                href="https://www.instagram.com/felipesou__/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>Instagram</p>
+                {' '}
+                <InstagramLogo size={24} />
+              </Link>
+            </li>
+          </ul>
 
         </section>
       </div>

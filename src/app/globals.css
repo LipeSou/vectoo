@@ -79,6 +79,12 @@ span {
   color: var(--primary-color);
 }
 
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* 
 .theme-switch__label:checked ~ span {
   --primary-color: blue;
