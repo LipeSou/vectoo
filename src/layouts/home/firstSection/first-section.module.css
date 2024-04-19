@@ -44,6 +44,7 @@
     box-shadow: var(--buttom-shadow-primary);
     animation: shadow-change 8s  infinite;
     transition: 0.2s all ease-in-out;
+    background-color: var(--primary-60);
 }
 
 .buttonGetImages:hover {
@@ -64,6 +65,7 @@
 .descriptionSite {
     font-size: 1.8rem;
     width: 32.1rem;
+    font-weight: 400;
 }
 
 .imageContainer {
