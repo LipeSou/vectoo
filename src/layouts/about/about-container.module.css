@@ -28,3 +28,9 @@
     transition: 0.2s;
     transition-timing-function: ease-in-out;
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr  1fr 1fr;
+    }
+}
