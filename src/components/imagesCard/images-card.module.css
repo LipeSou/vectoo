@@ -1,0 +1,20 @@
+.card {
+    height: 21.0rem;
+    width: 18.0rem;
+    background-color: #E4E1E2;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageContainer {
+    width: 80%;
+    margin-top: 2.8rem;
+}
+
+.description {
+    margin-top: 16px;
+    color: var(--gray-50);
+    font-weight: 500;
+}
