@@ -12,7 +12,7 @@ export default function AboutContainer() {
         <section>
           <Informations.Title title="Welcome 👋" />
           <Informations.Info info="This site arose from a desire to contribute in some way to the community and unite my passions for developing and drawing.
-Vectoo is dedicated to offering a collection of original vector designs, crafted with love and available for free for your projects."
+                                    Vectoo is dedicated to offering a collection of original vector designs, crafted with love and available for free for your projects."
           />
         </section>
         <Informations.Divider />

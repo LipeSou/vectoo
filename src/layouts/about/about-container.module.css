@@ -1,5 +1,6 @@
 .container {
     margin-top: 132px;
+    margin-bottom: 80px;
     display: grid;
     grid-template-columns: 1fr 552px 1fr 1fr;
 }

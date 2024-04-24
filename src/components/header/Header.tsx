@@ -9,6 +9,11 @@ import logo from '../../assets/logos/logopencil.svg';
 export default function Header() {
   const pathname = usePathname();
 
+  const handleMenuToggle = () => {
+    const checkbox = document.getElementById('menuMobile') as HTMLInputElement;
+    if (checkbox) checkbox.checked = false;
+  };
+
   return (
     <header className={styles.container}>
 
@@ -26,13 +31,13 @@ export default function Header() {
           {/* navbar menu */}
           <ul className={styles.navbar}>
             <li className={styles.navbarLiMenu}>
-              <Link href="/" className={pathname === '/' ? styles.linkActive : styles.link}>Home</Link>
+              <Link href="/" className={pathname === '/' ? styles.linkActive : styles.link} onClick={handleMenuToggle}>Home</Link>
             </li>
             <li className={styles.navbarLiMenu}>
-              <Link href="/about" className={pathname === '/about' ? styles.linkActive : styles.link}>About</Link>
+              <Link href="/about" className={pathname === '/about' ? styles.linkActive : styles.link} onClick={handleMenuToggle}>About</Link>
             </li>
             <li className={styles.navbarLiMenu}>
-              <Link href="/images" className={pathname === '/images' ? styles.linkActive : styles.link}>Get Images</Link>
+              <Link href="/images" className={pathname === '/images' ? styles.linkActive : styles.link} onClick={handleMenuToggle}>Get Images</Link>
             </li>
 
             {/* checkbox change theme !FOR THE FUTURE! */}
