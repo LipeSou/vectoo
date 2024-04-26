@@ -44,13 +44,14 @@
     box-shadow: var(--buttom-shadow-primary);
     animation: shadow-change 8s  infinite;
     transition: 0.2s all ease-in-out;
-    background-color: var(--primary-60);
+    background-color: var(--primary-50);
+    color:black;
+    transition: transform 0.3s ease-in-out, background-color 0.3s linear;
+    will-change: transform, background-color;
 }
 
 .buttonGetImages:hover {
-    color: #ffffff;
-    background-color: var(--primary-50);
-    border: 1px solid var(--black-100);
+    background-color: var(--primary-30);
 }
 
 @keyframes shadow-change {

@@ -19,7 +19,7 @@ export default function FirstSection() {
           <p className={styles.descriptionSite}>
             Totally free images that you can use on your projects.
           </p>
-          <Link href="./get-images" className={styles.buttonGetImages}>Get Images</Link>
+          <Link href="./images" className={styles.buttonGetImages}>Get Images</Link>
 
         </div>
 
